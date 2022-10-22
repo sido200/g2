@@ -29,6 +29,22 @@ addToCartButtons.forEach((item) => {
         </div>
         <h2>${cartItem.price * cartItem.quantity}$</h2>
       </div>`;
+      const pluses = document.querySelectorAll(".fa-plus");
+      pluses.forEach((plus) => {
+        plus.addEventListener("click", function (event) {
+          event.target.parentNode.querySelector("p").innerText =
+            Number(event.target.parentNode.querySelector("p").innerText) + 1;
+        });
+      });
+      const minuses = document.querySelectorAll(".fa-minus");
+      minuses.forEach((plus) => {
+        plus.addEventListener("click", function (event) {
+          if (event.target.parentNode.querySelector("p").innerText > 1) {
+            event.target.parentNode.querySelector("p").innerText =
+              Number(event.target.parentNode.querySelector("p").innerText) - 1;
+          }
+        });
+      });
     }
 
     console.log(cartItem);
