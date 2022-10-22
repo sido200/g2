@@ -89,6 +89,26 @@ body {
 }
 
 .modal.active {
+  padding-top: 20px;
   height: 70vh;
   width: 40vw;
+}
+.cart-item {
+  height: 60px;
+  width: 98%;
+  background-color: rgba(95, 158, 160, 0.577);
+  border-radius: 10px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  justify-content: space-between;
+}
+.cart-item .quantity {
+  display: flex;
+  width: 70px;
+  align-items: center;
+  justify-content: space-between;
 }
